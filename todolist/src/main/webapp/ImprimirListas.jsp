@@ -1,4 +1,5 @@
-<%--
+        <%@ page import="java.util.ArrayList" %>
+<%@ page import="com.todolist.todolist.models.Listas" %><%--
   Created by IntelliJ IDEA.
   User: fmrlo
   Date: 27/04/2025
@@ -17,11 +18,26 @@
 
   <div class="container">
 
+      <%
+          ArrayList<Listas> lista = (ArrayList<Listas>) request.getAttribute("lista");
+
+          int i = 0;
+          if (lista != null) {
+              for (i = 0; i < lista.size(); i++) {
+      %>
+
     <div>
-      <p>lalala</p>
-      <p>lalala</p>
-      <p>lalala</p>
+      <p>nombre de la lista: <%lista.get(i).getNombreLista(); %></p>
+      <p>producto: <%lista.get(i).getProducto(); %></p>
+      <p>cantidad: <%lista.get(i).getCantidad(); %></p>
+      <p>observaciones: <%lista.get(i).getObservaciones(); %></p>
+      <p>nombreUsuario: <%lista.get(i).getNombreUsuario(); %></p>
     </div>
+
+      <%
+              }
+          }
+      %>
 
   </div>
 

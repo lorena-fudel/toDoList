@@ -7,7 +7,7 @@
 }
 
 .container div{
-    border: solid #e869aa;
+    border: solid #dc4e4e;
     border-radius: 10px;
     border-color: #c17d7d;
     display: flex;
@@ -19,3 +19,6 @@
     justify-content:center;
 }
 
+h1{
+    color: #dc4e4e;
+}
