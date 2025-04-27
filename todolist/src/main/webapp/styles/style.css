@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.container div{
+    border: solid #e869aa;
+    border-radius: 10px;
+    border-color: #c17d7d;
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+    flex-direction: column;
+    justify-content:center;
+}
+
