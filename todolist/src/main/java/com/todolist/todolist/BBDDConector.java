@@ -32,7 +32,7 @@ public class BBDDConector {
         return instance;
     }
 
-    public Connection getConn() {
+    public Connection GetConn() {
         return con;
     }
 }

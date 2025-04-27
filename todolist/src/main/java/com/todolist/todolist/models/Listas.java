@@ -2,7 +2,7 @@ package com.todolist.todolist.models;
 
 public class Listas {
 
-    private String id;
+    private int id;
     private String nombreLista;
     private String producto;
     private String cantidad;
@@ -14,7 +14,7 @@ public class Listas {
     }
 
     public Listas(String id, String nombreLista, String producto, String cantidad, String observaciones, String nombreUsuario) {
-        this.id = id;
+        this.id = Integer.parseInt(id);
         this.nombreLista = nombreLista;
         this.producto = producto;
         this.cantidad = cantidad;
@@ -22,12 +22,12 @@ public class Listas {
         this.nombreUsuario = nombreUsuario;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
     public void setId(String id) {
-        this.id = id;
+        this.id = Integer.parseInt(id);
     }
 
     public String getNombreLista() {
