@@ -22,3 +22,17 @@
 h1{
     color: #dc4e4e;
 }
+
+.add{
+    display: block;
+
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+    border: solid 2px #fd3a3a;
+    color: #ef258a;
+}

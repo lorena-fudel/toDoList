@@ -1,7 +1,6 @@
 package com.todolist.todolist.controllers;
 
 import com.todolist.todolist.BBDD.DAO.ListasDAO;
-import com.todolist.todolist.models.Listas;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -10,25 +9,22 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.sql.SQLException;
 
-@WebServlet(name="obtenerListas", urlPatterns={"/obtenerListas"})
-public class ObtenerListasControllers extends HttpServlet {
+@WebServlet(name="editarLista", urlPatterns={"/editarLista"})
+public class editarListaControllers extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-       try {
-           ArrayList <Listas> listas = ListasDAO.GetAll();
+        String id = req.getParameter("idListas");  //lista?? id??
 
-           req.setAttribute("lista",listas);
+        int idNumber = Integer.parseInt(id);
 
-       }catch (Exception e){
-           throw new RuntimeException(e);
-
-       }
+   req.setAttribute("idListas", idNumber); //*****
 
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("ImprimirListas.jsp");
-        dispatcher.forward(req,resp);
+        //esto no funciona, creo por async asincronia
+        RequestDispatcher dispacher = req.getRequestDispatcher("editarListas.jsp");
+        dispacher.forward(req, resp);
     }
 }

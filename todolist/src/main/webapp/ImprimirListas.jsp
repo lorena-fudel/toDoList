@@ -10,11 +10,14 @@
 <html>
 <head>
     <title>Listado de Listas</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/listadoListas.css">
 </head>
 <body>
 
   <h1>Listado de Listas</h1>
+
+  <a href="anadirProducto.jsp" class="add">AÑADIR LISTA +</a>
+  <%--<a href="obtenerListas.jsp" class="add">listado de listas</a>     HAY QUE HACER BIEN ESTE ENLACE--%>
 
   <div class="container">
 
@@ -31,6 +34,12 @@
       <p>cantidad: <%=lista.get(i).getCantidad() %></p>
       <p>observaciones: <%=lista.get(i).getObservaciones() %></p>
       <p>nombreUsuario: <%=lista.get(i).getNombreUsuario() %></p>
+        <a href="borrarLista?idListas=<%= lista.get(i).getIdListas()%>">
+            <button>BORRAR LISTA</button>
+        </a>
+        <a href="editarLista?idListas=<%= lista.get(i).getIdListas()%>">
+            <button>EDITAR LISTA</button>
+        </a>
     </div>
 
       <%

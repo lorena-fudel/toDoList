@@ -23,7 +23,7 @@ public class ListasDAO {
 
         while (rs.next()) {
             Listas listas = new Listas();
-            listas.setId(rs.getString("idLista"));
+            listas.setIdListas(rs.getString("idLista"));
             listas.setNombreLista(rs.getString("nombreLista"));
             listas.setProducto(rs.getString("producto"));
             listas.setCantidad(rs.getString("cantidad"));
@@ -36,7 +36,7 @@ public class ListasDAO {
     }
 
     public static boolean DeleteLista(int idLista) throws SQLException {
-        String query = "delete from listas where idLista = ?";
+        String query = "delete from lista where idLista = ?";
         Connection conn = BBDDConector.GetInstance().GetConn();
         PreparedStatement ps = conn.prepareStatement(query);
         ps.setInt(1, idLista);            //id     o idLista
@@ -65,7 +65,7 @@ public class ListasDAO {
 
 
     public static boolean UpdateLista(Listas listas) throws SQLException {
-        String query = "UPDATE LISTA SET nombreLista=?, produto=?, cantidad=?, observaciones=?, nombreUsuario=? WHERE idLista=?";
+        String query = "UPDATE LISTA SET nombreLista=?, producto=?, cantidad=?, observaciones=?, nombreUsuario=? WHERE idLista=?";
 
         Connection conn = BBDDConector.GetInstance().GetConn();
         PreparedStatement ps = conn.prepareStatement(query);
@@ -75,7 +75,7 @@ public class ListasDAO {
         ps.setString(3, listas.getCantidad());
         ps.setString(4, listas.getObservaciones());
         ps.setString(5, listas.getNombreUsuario());
-        ps.setInt(6, listas.getId());
+        ps.setInt(6, listas.getIdListas());
 
         int rows = ps.executeUpdate();
 
