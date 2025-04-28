@@ -14,7 +14,7 @@ public class ListasDAO {
     public static ArrayList<Listas> GetAll() throws SQLException {
         ArrayList<Listas> aux = new ArrayList<>();
 
-        String query = "select * from lista";
+        String query = "SELECT * FROM todolist.lista";
 
         Connection conn = BBDDConector.GetInstance().GetConn();
         PreparedStatement ps = conn.prepareStatement(query);
