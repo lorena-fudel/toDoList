@@ -1,22 +1,16 @@
-        <%@ page import="java.util.ArrayList" %>
-<%@ page import="com.todolist.todolist.models.Listas" %><%--
-  Created by IntelliJ IDEA.
-  User: fmrlo
-  Date: 27/04/2025
-  Time: 21:45
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="com.todolist.todolist.models.Listas" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Listado de Listas</title>
-    <link rel="stylesheet" href="styles/listadoListas.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
   <h1>Listado de Listas</h1>
 
-  <a href="anadirProducto.jsp" class="add">AÑADIR LISTA +</a>
+  <a href="anadirProducto.jsp" class="add">AÑADIR LISTA</a>
   <%--<a href="obtenerListas.jsp" class="add">listado de listas</a>     HAY QUE HACER BIEN ESTE ENLACE--%>
 
   <div class="container">

@@ -3,21 +3,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JSP - Hello World</title>
+  <title>TO DO LIST</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
-  <h1><%= "TO DO LIST" %></h1>
 
-<br/>
+<div class="body">
 
-  <a href="obtenerListas">IMPRMIR LISTAS</a>
+  <h1 class="titulo-principal"><%= "Lista de Tareas" %></h1>
+  <h2>b i e n v e n i d @ s</h2>
 
-<%
+  <br/>
 
-  BBDDConector.GetInstance();
+  <a class="enlaces" href="obtenerListas">IMPRMIR LISTAS</a>
 
-%>
 
+
+<footer>
+  <p>Lorena Fumero Delgado - Poryecto Intermodular - 2025 &copy;</p>
+</footer>
+
+  <%
+
+    BBDDConector.GetInstance();
+
+  %>
+</div>
 
 
 </body>

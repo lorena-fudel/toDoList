@@ -27,6 +27,11 @@ public class borrarListaControllers extends HttpServlet {
             //redireciconar??
         }
 
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
         //esto no funciona, creo por async asincronia
         RequestDispatcher dispacher = req.getRequestDispatcher("ImprimirListas.jsp");

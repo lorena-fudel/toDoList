@@ -1,15 +1,8 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: fmrlo
-  Date: 28/04/2025
-  Time: 9:55
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>editar</title>
-  <link rel="stylesheet" href="styles/add.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
