@@ -11,12 +11,22 @@
 
 <div class="body">
 
-  <h1 class="titulo-principal"><%= "Lista de Tareas" %></h1>
+  <div class="titulo-pagina">
+    <div>
+      <img src="img/logo-toDoList.jpg">
+    </div>
+    <div>
+      <h1 class="titulo-principal"><%= "Lista de Tareas" %></h1>
+    </div>
+  </div>
+
   <h2>b i e n v e n i d @ s</h2>
+  <div class="container-principal-index">
+    <nav class="nav-pagina">
+      <a class="enlaces" href="obtenerListas">IMPRMIR LISTAS</a>
+    </nav>
+  </div>
 
-  <br/>
-
-  <a class="enlaces" href="obtenerListas">IMPRMIR LISTAS</a>
 
 
 
