@@ -5,6 +5,7 @@
 <head>
     <title>Listado de Listas</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 <body>
 
@@ -29,10 +30,10 @@
       <p>observaciones: <%=lista.get(i).getObservaciones() %></p>
       <p>nombreUsuario: <%=lista.get(i).getNombreUsuario() %></p>
         <a href="borrarLista?idListas=<%= lista.get(i).getIdListas()%>">
-            <button>BORRAR LISTA</button>
+            <button class="borrar-lista" onclick="borrar()">BORRAR LISTA</button>
         </a>
         <a href="editarLista?idListas=<%= lista.get(i).getIdListas()%>">
-            <button>EDITAR LISTA</button>
+            <button class="editar-lista" onclick="editar()">EDITAR LISTA</button>
         </a>
     </div>
 

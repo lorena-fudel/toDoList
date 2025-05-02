@@ -114,6 +114,6 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: ;
+    align-items: center;
     color: #dc5e9d;
 }
