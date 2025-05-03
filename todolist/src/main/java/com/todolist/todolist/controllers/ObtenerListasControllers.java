@@ -1,5 +1,6 @@
 package com.todolist.todolist.controllers;
 
+
 import com.todolist.todolist.BBDD.DAO.ListasDAO;
 import com.todolist.todolist.models.Listas;
 import jakarta.servlet.RequestDispatcher;
@@ -26,7 +27,6 @@ public class ObtenerListasControllers extends HttpServlet {
            throw new RuntimeException(e);
 
        }
-
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("ImprimirListas.jsp");
         dispatcher.forward(req,resp);
