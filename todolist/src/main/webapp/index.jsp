@@ -5,6 +5,8 @@
 <head>
   <title>TO DO LIST</title>
   <link rel="stylesheet" href="styles/style.css">
+  <script src="js/main.js" defer></script>
+
 </head>
 
 <body>
@@ -23,7 +25,9 @@
   <h2>b i e n v e n i d @ s</h2>
   <div class="container-principal-index">
     <nav class="nav-pagina">
-      <a class="enlaces" href="obtenerListas">IMPRIMIR LISTAS</a>
+
+        <a class="enlaces" href="obtenerListas" onmouseover="resaltarBoton(this)" onmouseout="quitarResaltado(this)">IMPRIMIR LISTAS</a>
+
     </nav>
   </div>
 
